@@ -1,0 +1,838 @@
+/* Place these at the top of your CSS file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styling for the Pillars Section */
+.pillars {
+  color: #333;
+  font-size: 1vw;
+  margin-bottom: 2vh;
+}
+
+.list {
+  list-style-type: none;
+  font-weight: bold;
+  line-height: 1.2;
+  font-size: 4vw;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.unique-separator {
+  height: 4px; /* Increase height to ensure visibility */
+  background-color: white; /* Use a color that contrasts with your background */
+  margin: 16px 0; /* Add margin to create space above and below the line */
+  position: relative; /* Use position to apply z-index */
+  z-index: 20; /* Bring to front in case it's behind other elements */
+}
+
+/* Your Separator Style - Place after Tailwind imports and custom animations */
+.footer-separator {
+  height: 1px;
+  background-color: white;
+  margin: 0;
+}
+
+/* Continue with your other styles */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-slideIn {
+  animation: slideIn 1s ease-in-out;
+}
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+/* Navbar Section Styling */
+.navbar-section {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.navbar-inset {
+  width: 97%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: #4299e1;
+}
+
+/* Blue Start Now Button */
+.btn-blue {
+  background-color: #4299e1;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-blue:hover {
+  background-color: #2b6cb0;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 1rem;
+  top: -30%;
+  transform: translateY(-30%);
+}
+
+.hero-content h1 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #E5E7EB;
+}
+
+/* Chevron Section Styles */
+.chevron-section {
+  background-color: #111;
+  padding: 40px 0;
+}
+
+.chevron-inset-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.chevron-container {
+  cursor: pointer;
+  animation: bounce 2s infinite;
+}
+
+.chevron-down {
+  width: 40px;
+  height: 40px;
+  stroke: #fff;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Events Section Styling */
+.events-section {
+  background-color: black;
+  padding: 4rem 2rem;
+}
+
+.events-section h2 {
+  color: white;
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.events-description {
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+
+.events-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.event-card {
+  flex: 1 1 calc(25% - 1.125rem);
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.event-media {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.event-img,
+.event-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.event-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(44, 51, 63, 0.8);
+  padding: 1rem;
+}
+
+.event-content h3 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-content p {
+  color: #a0aec0;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-link {
+  color: #4299e1;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+/* Social Media Icons Styling */
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon i {
+  font-size: 24px;
+  color: #ffffff;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.social-icon:hover i {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Social Media Icons Styling */
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-icon i {
+  font-size: 24px;
+  color: #ffffff;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.social-icon:hover i {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+
+
+/* CTA Section Styling */
+.cta-section {
+  background: linear-gradient(to right, #3182CE, #805AD5);
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  font-size: 1.5rem;
+  color: #E2E8F0;
+  margin-bottom: 2rem;
+}
+
+.cta-section .btn {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-section .btn:hover {
+  background-color: #E5E7EB;
+}
+
+/* Rotating Chiropractic Messages Section */
+.chiropractic-messages-section {
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+  height: 160px; /* Increased height for larger text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  letter-spacing: 3px; /* Increased letter spacing */
+  text-transform: uppercase; /* Ensure all letters are capitalized */
+}
+
+.message-carousel {
+  display: flex;
+  animation: scrollMessages 50s linear infinite; /* Restored the original speed */
+  white-space: nowrap;
+}
+
+.chiropractic-message {
+  font-size: 64px; /* Larger font size */
+  margin-right: 60px; /* Increased space between messages */
+  color: white;
+  line-height: 1.2; /* Slightly adjusted for better readability */
+}
+
+/* Keyframes for Smooth Scrolling Animation */
+@keyframes scrollMessages {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%); /* Adjust to create an infinite loop with multiple sets */
+  }
+}
+
+/* Master Video Section Styling */
+.master-video-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10vh;
+}
+
+.fullscreen-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* New overlay class */
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 5;
+}
+
+.master-content {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 10;
+  padding: 2rem;
+  border-radius: 10px 10px 0 0;
+  max-width: 80%;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Slight background for better readability */
+}
+
+.master-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
+}
+
+.master-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow for paragraph */
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: #4299e1;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+}
+
+.cta-button:hover {
+  background-color: #2b6cb0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Testimonial Section Styling */
+.testimonial-section {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 4rem; /* Increased heading size */
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 3rem;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.testimonial-photo {
+  flex: 1 1 30%;
+  max-width: 400px;
+  position: relative;
+  height: 400px;
+}
+
+.testimonial-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.testimonial-quote {
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rem; /* Significantly increased quote size */
+  font-style: italic;
+  transition: opacity 0.5s;
+  line-height: 1.5; /* Improved readability */
+}
+
+.testimonial-quote p {
+  margin-bottom: 1.5rem; /* Added more space below quote */
+}
+
+.testimonial-author {
+  font-size: 2rem; /* Increased author size for visibility */
+  font-weight: bold;
+  color: #4A90E2;
+}
+
+.testimonial-grid {
+  flex: 1 1 30%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.testimonial-grid-item {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-grid-item:hover {
+  transform: scale(1.1);
+  border: 2px solid #4A90E2;
+}
+
+.testimonial-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.animated-arrow-box {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  animation-delay: 1.4s;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.animated-arrow-box i {
+  color: white;
+  font-size: 32px;
+  transition: color 0.3s;
+}
+
+.animated-arrow-box:hover {
+  background-color: rgba(255, 204, 0, 0.8);
+  transform: translateY(-5px);
+}
+
+.animated-arrow-box:hover i {
+  color: #000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .chevron-down {
+    width: 30px;
+    height: 30px;
+  }
+
+  .events-grid {
+    flex-direction: column;
+  }
+
+  .event-card {
+    width: 100%;
+  }
+
+  .testimonial-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 640px) {
+  .cta-section h2 {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 3.75rem;
+  }
+}
+
+/* Utility Classes for Responsive Padding */
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Inset Media Container Styling */
+.inset-media-container {
+  position: absolute;
+  inset: 16px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.media-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bottom Hero Section Styles */
+.bottom-hero {
+  background-color: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.bottom-hero h1 {
+  font-size: 66px;
+  margin-bottom: 20px;
+}
+
+.bottom-hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.bottom-hero-media {
+  display: flex;
+  justify-content: center;  /* Center the image horizontally */
+  align-items: center;       /* Center the image vertically */
+  width: 100%;               /* Ensure full width of the container */
+  height: 800px;             /* Increase the height significantly to make the frame larger */
+  margin-bottom: 50px;       /* Adjust spacing below as needed */
+  background-color: rgba(255, 255, 255, 0.1); /* Optional: Add a background color to make the frame visible */
+}
+
+.bottom-cta-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bottom-cta-button:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.animated-arrow-box {
+  position: relative;
+  margin: 20px auto 0 auto;
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  animation-delay: 1.4s;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.animated-arrow-box i {
+  color: white;
+  font-size: 32px;
+  transition: color 0.3s;
+}
+
+.animated-arrow-box:hover {
+  background-color: #65696b;
+  transform: translateY(-5px);
+}
+
+.animated-arrow-box:hover i {
+  color: #000;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
